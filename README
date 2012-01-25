@@ -1,1 +1,32 @@
-Documentation
+# Obj704
+
+Yii Framework concept preview CMS with 
+jsTree drag&drop page tree control 
+suported with NestedBehavior nested model set database
+
+Not ready for production.
+
+## Installation
+
+Ready to use shared hosting demo version.
+
+1. Download the script
+2. Place it on your server.
+3. Copy/Setup .htaccess file
+
+## Usage
+
+type in /admin
+login/pass : admin/admin
+
+for more how to use info go to : http://www.jstree.com/
+
+## Configuration
+
+Setup your database credentials at /protected/config/main.php
+Setup your account login/pass at /protected/components/UserIdentity.php
+
+
+## License
+
+see Yii framework http://www.yiiframework.com/license/

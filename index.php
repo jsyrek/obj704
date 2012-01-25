@@ -1,4 +1,6 @@
 <?php
+if($_SERVER['SCRIPT_NAME'] == '/')
+$_SERVER['SCRIPT_NAME'] = '/index.php'; 
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';

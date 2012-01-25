@@ -7,18 +7,18 @@ class SiteController extends Controller
 	 */
 	public function actions()
 	{
-		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
-		);
+            return array(
+                // captcha action renders the CAPTCHA image displayed on the contact page
+                'captcha'=>array(
+                        'class'=>'CCaptchaAction',
+                        'backColor'=>0xFFFFFF,
+                ),
+                // page action renders "static" pages stored under 'protected/views/site/pages'
+                // They can be accessed via: index.php?r=site/page&view=FileName
+                'page'=>array(
+                        'class'=>'CViewAction',
+                ),
+            );
 	}
 
 	/**
@@ -86,7 +86,8 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				//$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect('admin');
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
